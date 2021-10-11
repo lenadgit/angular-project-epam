@@ -29,4 +29,14 @@ name: string;
 
   }
 
+    addEl() {
+      this.courses = [...this.courses, {id: this.idCourse, heading: this.heading, text: this.text}];  
+      this.idCourse == this.idCourse++;
+      console.log(this.courses);
+    } 
+
+    deleteEl(id: number) {
+      this.courses = this.courses.filter(course => course.id !== id);
+  } 
+
 }

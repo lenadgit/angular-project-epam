@@ -1,6 +1,6 @@
 .courselist-wrapper {
 	background: #ccc;
-	padding-top: 5%;
+	padding-top: 2%;
 }
 
 .list-item {
@@ -13,6 +13,10 @@
 	-o-border-radius: 4px;
 }
 
-li {
-	list-style-type: none;
+.more-section {
+	margin: 2% 0;
+}
+
+.clearfix {
+	clear: both;
 }
