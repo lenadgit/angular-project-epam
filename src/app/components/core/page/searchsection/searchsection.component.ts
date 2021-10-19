@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-searchsection',
@@ -6,16 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchsection.component.css']
 })
 export class SearchsectionComponent implements OnInit {
-  	courses: object[];
-  	courseText: string;
-  	idCourse: number;
-  	heading: string;
-  	text: string;
-	
-  courseFilter: any = { heading: '' };	
+  @Output() public emitSearchValue: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public onSearchClick(value: string): void {
+    this.emitSearchValue.emit(value)
+  }
 }

@@ -1,28 +1,28 @@
-<div class = "courselist-wrapper">
-  <div class = "container">
-    <button class = "btn btn-lg btn-primary pull-right" (click) = "addEl()">+ Add course</button>
+<div class="courselist-wrapper">
+  <div class="container">
+    <button class="btn btn-lg btn-primary pull-right" (click)="addEl()">+ Add course</button>
   </div>
-	<div class = "container">    
+	<div class="container">
 	<div>
 		<!--<div class="" *ngFor = "let course of courses | filterBy: courseFilter" > -->
       <div class="" *ngFor = "let course of courses" >
-      <div class = "list-item">
-        <div class = "date-wrapper pull-right">
-          <span class = "time">&#9719; 1h 28min</span>&nbsp;&nbsp;
-          <span class = "date">📅 9 Nov 2020</span>          
+      <div class="list-item">
+        <div class="date-wrapper pull-right">
+          <span class="time">&#9719; 1h 28min</span>&nbsp;&nbsp;
+          <span class="date">📅 9 Nov 2020</span>
         </div>
-        <h2>Video course {{course.id}}. {{course.heading}} &nbsp; <span [ngClass]="{'yellow-star': true, 'transparent-star': false}">&#9733;</span></h2>
+        <h2>Video course {{course.id}}. {{course.heading}} &nbsp; <span [ngClass]="course.done ? 'yellow-star' : 'transparent-star'">&#9733;</span></h2>
         <p>{{course.text}}</p>
-        <div class = "item-nav pull-right">
-          <button class = "btn btn-lg btn-primary">&#9998; Edit</button>&nbsp;&nbsp;
-          <button class = "btn btn-lg btn-danger" (click) = "deleteEl(course.id)">&#9746; Delete</button>          
+        <div class="item-nav pull-right">
+          <button class="btn btn-lg btn-primary">&#9998; Edit</button>&nbsp;&nbsp;
+          <button class="btn btn-lg btn-danger" (click)="deleteEl(course.id)">&#9746; Delete</button>
         </div>
-        <div class = "clearfix"> </div>
+        <div class="clearfix"> </div>
       </div>
-    </div> 
+    </div>
 	</div>
-  <div class = "more-section">
-    <button class = "btn btn-lg btn-default btn-group-justified text-center">Load more</button>
+  <div class="more-section">
+    <button class="btn btn-lg btn-default btn-group-justified text-center">Load more</button>
   </div>
     </div>
 </div>
