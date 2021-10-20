@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourselistComponent implements OnInit {
     name: string;
-  	courses: object[];
+  	courses: any[];
   	courseText: string;
   	idCourse: number;
   	heading: string;
