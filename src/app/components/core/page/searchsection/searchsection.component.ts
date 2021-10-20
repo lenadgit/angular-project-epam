@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchsection.component.css']
 })
 export class SearchsectionComponent implements OnInit {
-
+  	courses: object[];
+  	courseText: string;
+  	idCourse: number;
+  	heading: string;
+  	text: string;
+	
+  courseFilter: any = { heading: '' };	
   constructor() { }
 
   ngOnInit() {

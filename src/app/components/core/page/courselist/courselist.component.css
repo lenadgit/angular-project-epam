@@ -20,3 +20,11 @@
 .clearfix {
 	clear: both;
 }
+
+.yellow-star {
+	color: #cf7856;
+}
+
+.transparent-star {
+	color: #ffffff;
+}
