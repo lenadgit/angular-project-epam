@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/core/header/header.component';
 import { BreadcrumbsComponent } from './components/core/breadcrumbs/breadcrumbs.component';
 import { SearchsectionComponent } from './components/core/page/searchsection/searchsection.component';
 import { CourselistComponent } from './components/core/page/courselist/courselist.component';
+import { CoursedateDirective } from './directives/coursedate.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CourselistComponent } from './components/core/page/courselist/courselis
     BreadcrumbsComponent,
     SearchsectionComponent,
     CourselistComponent,
+    CoursedateDirective,
   ],
   imports: [
     BrowserModule,
