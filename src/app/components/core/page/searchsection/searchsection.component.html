@@ -1,11 +1,11 @@
 <div class = "search-wrapper">
 	<div class = "container">
-	  <form class="navbar-form navbar-left">
+	  <!-- <form class="navbar-form navbar-left" > -->
         <div class="form-group">
-          <!--<input type="text" class="form-control" placeholder="Text to search" id = "inp" value = "" [(ngModel)]="courseFilter.heading">  -->
-         <input type="text" class="form-control" placeholder="Text to search" id = "inp" value = "" > 
+          <input type="text" class="form-control" placeholder="Text to search" id = "inp" value="" #searchInput>
+         <!-- <input type="text" class="form-control" placeholder="Text to search" id = "inp" value = "" >  -->
         </div>
-        <button type="submit" class="btn btn-success btn-lg">Search</button>
-      </form>
+        <button class="btn btn-success btn-lg" (click)="onSearchClick(searchInput.value)">Search</button>
+      <!-- </form> -->
 	</div>
 </div>

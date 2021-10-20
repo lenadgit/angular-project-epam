@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Courses';
+  searchValue = '';
+
+  public onSearchValue(value: string): void {
+    this.searchValue = value;
+  }
 }
