@@ -5,14 +5,14 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 })
 export class CoursedateDirective implements OnInit {
 
-currentDate = new Date();
-creationDate = new Date(2021, 10, 20);
 
   constructor(private element: ElementRef) { }
 
 
   ngOnInit () {
-  	if (this.creationDate < this.currentDate && this.creationDate >= (this.currentDate - 1209600)) {
+  	const currentDate = new Date();
+
+  	if (currentDate.setDate(currentDate.getDate()-14)) {
      this.element.nativeElement.style.borderColor = 'green';
   	}
  
