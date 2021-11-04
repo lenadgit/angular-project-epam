@@ -6,7 +6,7 @@
 	<div>
 		<!--<div class="" *ngFor = "let course of courses | filterBy: courseFilter" > -->
       <div class="" *ngFor = "let course of courses" >
-      <div class="list-item" appCoursedate>
+      <div class="list-item" appCoursedate [courseDate]="course.date">
         <div class="date-wrapper pull-right">
           <span class="time">&#9719; 1h 30min</span>&nbsp;&nbsp;
           <span class="date">📅 {{course.date | date}}</span>
