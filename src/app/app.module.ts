@@ -9,6 +9,8 @@ import { BreadcrumbsComponent } from './components/core/breadcrumbs/breadcrumbs.
 import { SearchsectionComponent } from './components/core/page/searchsection/searchsection.component';
 import { CourselistComponent } from './components/core/page/courselist/courselist.component';
 import { CoursedateDirective } from './directives/coursedate.directive';
+import { AuthserviceService } from './services/auth/authservice.service';
+import { SigninComponent } from './components/core/auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,13 @@ import { CoursedateDirective } from './directives/coursedate.directive';
     SearchsectionComponent,
     CourselistComponent,
     CoursedateDirective,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
