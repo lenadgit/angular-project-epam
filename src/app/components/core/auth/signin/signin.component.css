@@ -1,0 +1,9 @@
+body {
+    background: #c4c4c4;
+}
+.form-wrapper {
+    width: 40%;
+    min-width: 300px;
+    display: block;
+    margin: 20% auto;
+}
