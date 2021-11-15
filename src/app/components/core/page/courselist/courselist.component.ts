@@ -18,6 +18,7 @@ export class CourselistComponent implements OnInit, OnChanges {
   heading: string;
   text: string;
   done: boolean;
+  date: number;
 
   courseFilter: any = { heading: '' };
 

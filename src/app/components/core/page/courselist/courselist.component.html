@@ -6,12 +6,12 @@
 	<div>
 		<!--<div class="" *ngFor = "let course of courses | filterBy: courseFilter" > -->
       <div class="" *ngFor = "let course of courses" >
-      <div class="list-item">
+      <div class="list-item" appCoursedate>
         <div class="date-wrapper pull-right">
-          <span class="time">&#9719; 1h 28min</span>&nbsp;&nbsp;
-          <span class="date">📅 9 Nov 2020</span>
+          <span class="time">&#9719; 1h 30min</span>&nbsp;&nbsp;
+          <span class="date">📅 {{course.date | date}}</span>
         </div>
-        <h2>Video course {{course.id}}. {{course.heading}} &nbsp; <span [ngClass]="course.done ? 'yellow-star' : 'transparent-star'">&#9733;</span></h2>
+        <h2>Video course {{course.id}}. {{course.heading | uppercase}} &nbsp; <span [ngClass]="course.done ? 'yellow-star' : 'transparent-star'">&#9733;</span></h2>
         <p>{{course.text}}</p>
         <div class="item-nav pull-right">
           <button class="btn btn-lg btn-primary">&#9998; Edit</button>&nbsp;&nbsp;
