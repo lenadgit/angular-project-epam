@@ -11,6 +11,12 @@ import { CourselistComponent } from './components/core/page/courselist/courselis
 import { CoursedateDirective } from './directives/coursedate.directive';
 import { AuthserviceService } from './services/auth/authservice.service';
 import { SigninComponent } from './components/core/auth/signin/signin.component';
+import { CoursecontentComponent } from './components/core/coursepage/coursecontent/coursecontent.component';
+import { CoursedateComponent } from './components/core/coursepage/coursedate/coursedate.component';
+import { CoursedurationComponent } from './components/core/coursepage/courseduration/courseduration.component';
+import { CourseauthorsComponent } from './components/core/coursepage/courseauthors/courseauthors.component';
+import { CoursesaveComponent } from './components/core/coursepage/coursesave/coursesave.component';
+import { CourseviewComponent } from './components/core/coursepage/courseview/courseview.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,12 @@ import { SigninComponent } from './components/core/auth/signin/signin.component'
     CourselistComponent,
     CoursedateDirective,
     SigninComponent,
+    CoursecontentComponent,
+    CoursedateComponent,
+    CoursedurationComponent,
+    CourseauthorsComponent,
+    CoursesaveComponent,
+    CourseviewComponent,
   ],
   imports: [
     BrowserModule,
