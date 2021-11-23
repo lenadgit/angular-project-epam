@@ -1,6 +1,6 @@
 <div class="courselist-wrapper">
   <div class="container">
-    <button class="btn btn-lg btn-primary pull-right" (click)="addEl()">+ Add course</button>
+    <button class="btn btn-lg btn-primary pull-right"  routerLink="/courses/new-page">+ Add course</button>
   </div>
 	<div class="container">
 	<div>
@@ -14,7 +14,7 @@
         <h2>Video course {{course.id}}. {{course.heading | uppercase}} &nbsp; <span [ngClass]="course.done ? 'yellow-star' : 'transparent-star'">&#9733;</span></h2>
         <p>{{course.text}}</p>
         <div class="item-nav pull-right">
-          <button class="btn btn-lg btn-primary">&#9998; Edit</button>&nbsp;&nbsp;
+          <button class="btn btn-lg btn-primary" [routerLink] ="['/courses/new-page', 'course.id']">&#9998; Edit</button>&nbsp;&nbsp;
           <button class="btn btn-lg btn-danger" (click)="deleteEl(course.id)">&#9746; Delete</button>
         </div>
         <div class="clearfix"> </div>
