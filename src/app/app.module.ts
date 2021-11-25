@@ -18,6 +18,7 @@ import { CourseauthorsComponent } from './components/core/coursepage/courseautho
 import { CoursesaveComponent } from './components/core/coursepage/coursesave/coursesave.component';
 import { CourseviewComponent } from './components/core/coursepage/courseview/courseview.component';
 import { PageviewComponent } from './components/core/page/pageview/pageview.component';
+import { EditcourseComponent } from './components/core/coursepage/editcourse/editcourse.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PageviewComponent } from './components/core/page/pageview/pageview.comp
     CoursesaveComponent,
     CourseviewComponent,
     PageviewComponent,
+    EditcourseComponent,
   ],
   imports: [
     BrowserModule,
