@@ -1,6 +1,6 @@
 <div class = "container">
-<app-coursecontent></app-coursecontent>
-<app-coursedate></app-coursedate>
+<app-coursecontent [currentCourse]="currentCourse"></app-coursecontent>
+<app-coursedate [courseDate]="currentCourse.date"></app-coursedate>
 <app-courseduration></app-courseduration>
 <br><br>
 <app-coursesave></app-coursesave>

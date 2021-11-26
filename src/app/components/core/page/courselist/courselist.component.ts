@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { CoursesService } from 'src/app/services/auth/courses.service';
 
 import { COURSES_LIST } from '../../courses-list';
 
@@ -22,13 +23,13 @@ export class CourselistComponent implements OnInit, OnChanges {
 
   courseFilter: any = { heading: '' };
 
-  constructor() { }
+  constructor(public coursesService: CoursesService) { }
 
   ngOnInit() {
   	this.courseText = '';
   	this.idCourse = 1;
 
-  	this.courses = COURSES_LIST;
+  	this.courses = this.coursesService.getCoursesList();
   }
 
   addEl() {
@@ -48,6 +49,7 @@ export class CourselistComponent implements OnInit, OnChanges {
     };
   }
 
+  // Remove and implement method on service
   filterCoursesList(value: string): void {
     this.courses = !!value ? COURSES_LIST.filter((course) => {
       return course.heading.toLowerCase().includes(value);

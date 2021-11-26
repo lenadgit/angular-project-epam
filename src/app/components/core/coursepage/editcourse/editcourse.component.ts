@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CoursesService } from 'src/app/services/auth/courses.service';
 
 @Component({
   selector: 'app-editcourse',
@@ -7,16 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditcourseComponent implements OnInit {
 
-  constructor() { }
+  public currentCourse;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private coursesService: CoursesService) {}
+
+  public ngOnInit(): void {
   	this.getCourseview();
   }
 
-  getCourseview(): void {
-    this.route.params.subscribe(courses => course.id);
-    //Below was an example
-    //.subscribe(heroes => this.heroes = heroes);
+  public getCourseview(): void {
+    this.route.params.subscribe(course => {
+      this.currentCourse = this.findCurrentCourse(+course.id);
+    });
   }
 
+  public findCurrentCourse(id: number) {
+    return this.coursesService.getCoursesList().find(course => course.id === id);
+  }
 }
